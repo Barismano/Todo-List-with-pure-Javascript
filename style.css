@@ -25,6 +25,10 @@ form input,form button{
     font-size: 2rem;
     border: none;
     background-color: white;
+    
+}
+form input{
+    margin-left: 10rem;
 }
 form input:focus{
     border: none;
@@ -117,7 +121,58 @@ form button:active{
     text-decoration: line-through;
     opacity: 0.5;
 }
+.fall{
+    /* transform: rotate3d(1, 0, 0,360deg); */
+    transform: translateY(5rem) rotateZ(-10deg) rotateZ(20deg);
+    /* transition-duration:1s; */
+    opacity: 0;
+}
+.fall::after{
+    transform: translateY(5rem) rotateZ(-10deg) rotateZ(20deg);
+    /* transition-duration:1s; */
+    opacity: 0;
+}
+.filter-todo{
+    padding: 0.469rem 0rem;
+    font-size: 2rem;
+    border: none;
+    font-family: "Inter",sans-serif;
+    background-color: transparent;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+    outline: 0;
+}
+.filter-todo:focus{
+    color: white;
+    outline: 0;
+    border: none;
+}
+.filter-todo::after{
+    color: white;
+    outline: 0;
+    border: none;
+}
+option{
+    background-color: #323a5b;
+    font-family: "Inter",sans-serif;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
 
+select{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.select::after{
+    pointer-events: none;
+    transition: all 1s ease;
+}
+.select:hover::after{
+    cursor: pointer;
+}
 
 
 
